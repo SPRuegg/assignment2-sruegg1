@@ -42,7 +42,13 @@ let rec fac n =
 (* Part 3: Lists *)
 (*****************)
 
-let rec get_nth ((idx:int), (lst: 'a list)) = failwith "unimplemented"
+let rec get_nth ((idx:int), (lst: 'a list)) =
+  if lst = [] then
+    failwith "Index is out of bounds"
+  else if idx = 0 then
+    List.hd lst
+  else
+    get_nth (idx-1, List.tl lst)
 
 let larger lst1 lst2 = failwith "unimplemented"
 
