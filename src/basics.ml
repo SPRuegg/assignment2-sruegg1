@@ -50,6 +50,14 @@ let rec get_nth ((idx:int), (lst: 'a list)) =
   else
     get_nth (idx-1, List.tl lst)
 
-let larger lst1 lst2 = failwith "unimplemented"
+let larger lst1 lst2 =
+  let len1 = List.length lst1 in
+  let len2 = List.length lst2 in
+  if len1 > len2 then
+    lst1
+  else if len2 > len1 then
+    lst2
+  else
+    []
 
 let sum lst1 lst2 = failwith "unimplemented"
