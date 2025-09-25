@@ -28,7 +28,10 @@ let to_us_format (date1: int * int * int) =
 (* Part 2: Recursive Functions *)
 (*******************************)
 
-let rec pow x p = failwith "unimplemented"
+let rec pow x p =
+  if p = 0
+  then 1
+  else x * pow x (p-1)
 
 let rec fac n = failwith "unimplemented"
 
