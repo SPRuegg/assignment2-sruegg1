@@ -33,7 +33,10 @@ let rec pow x p =
   then 1
   else x * pow x (p-1)
 
-let rec fac n = failwith "unimplemented"
+let rec fac n =
+  if n = 0
+  then 1
+  else n * fac (n-1)
 
 (*****************)
 (* Part 3: Lists *)
