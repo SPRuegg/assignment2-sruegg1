@@ -6,7 +6,10 @@ let abs x =
 (* Part 1: Non-Recursive Functions *)
 (***********************************)
 
-let rev_tup (tup : 'a * 'b) = failwith "unimplemented"
+let rev_tup (tup : 'a * 'b) =
+  match tup with
+  | (first, second) -> (second, first)
+
 let rev_triple (tup : 'a * 'b * 'c) = failwith "unimplemented"
 
 let is_odd x = failwith "unimplemented"
