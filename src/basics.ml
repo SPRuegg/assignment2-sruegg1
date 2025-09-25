@@ -17,7 +17,8 @@ let rev_triple (tup : 'a * 'b * 'c) =
 let is_odd x =
   x mod 2 <> 0
 
-let is_older (date1: int * int * int) (date2: int * int * int) = failwith "unimplemented"
+let is_older (date1: int * int * int) (date2: int * int * int) =
+  date1 < date2
 
 let to_us_format (date1: int * int * int) = failwith "unimplemented"
 (*******************************)
