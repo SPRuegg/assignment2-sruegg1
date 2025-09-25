@@ -12,7 +12,7 @@ let rev_tup (tup : 'a * 'b) =
 
 let rev_triple (tup : 'a * 'b * 'c) =
   match tup with
-    (first, second, third) -> (third, second, first)
+  | (first, second, third) -> (third, second, first)
 
 let is_odd x =
   x mod 2 <> 0
@@ -22,7 +22,7 @@ let is_older (date1: int * int * int) (date2: int * int * int) =
 
 let to_us_format (date1: int * int * int) =
   match date1 with
-    (first, second, third) -> (second, third, first)
+  | (first, second, third) -> (second, third, first)
 
 (*******************************)
 (* Part 2: Recursive Functions *)
@@ -60,4 +60,11 @@ let larger lst1 lst2 =
   else
     []
 
-let sum lst1 lst2 = failwith "unimplemented"
+let sum lst1 lst2 =
+  let rec sum_list lst =
+    match lst with
+    | [] -> 0
+    | head :: tail -> head + sum_list tail
+  in
+  (sum_list lst1) + (sum_list lst2)
+
