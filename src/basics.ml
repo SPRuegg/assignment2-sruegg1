@@ -10,7 +10,9 @@ let rev_tup (tup : 'a * 'b) =
   match tup with
   | (first, second) -> (second, first)
 
-let rev_triple (tup : 'a * 'b * 'c) = failwith "unimplemented"
+let rev_triple (tup : 'a * 'b * 'c) =
+  match tup with
+    (first, second, third) -> (third, second, first)
 
 let is_odd x = failwith "unimplemented"
 
