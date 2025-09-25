@@ -20,7 +20,10 @@ let is_odd x =
 let is_older (date1: int * int * int) (date2: int * int * int) =
   date1 < date2
 
-let to_us_format (date1: int * int * int) = failwith "unimplemented"
+let to_us_format (date1: int * int * int) =
+  match date1 with
+    (first, second, third) -> (second, third, first)
+
 (*******************************)
 (* Part 2: Recursive Functions *)
 (*******************************)
