@@ -14,7 +14,8 @@ let rev_triple (tup : 'a * 'b * 'c) =
   match tup with
     (first, second, third) -> (third, second, first)
 
-let is_odd x = failwith "unimplemented"
+let is_odd x =
+  x mod 2 <> 0
 
 let is_older (date1: int * int * int) (date2: int * int * int) = failwith "unimplemented"
 
